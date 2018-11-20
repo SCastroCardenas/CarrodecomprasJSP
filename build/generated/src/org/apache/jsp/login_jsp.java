@@ -52,14 +52,25 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/index.css\">\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        <h1>Iniciar Sesión</h1>\n");
+      out.write("    <body id=\"bobo\">\n");
+      out.write("        <h2 id=\"h1iniciar\">Iniciar Sesión</h2>\n");
       out.write("\n");
       out.write("        <form action=\"login.jsp\" method=\"post\">\n");
-      out.write("            Usuario: <input type=\"text\" name=\"txtUsuario\">\n");
-      out.write("            Contraseña: <input type=\"text\" name=\"txtContra\">\n");
-      out.write("            <input type=\"submit\" name=\"btnIngresar\" value=\"Ingresar\">\n");
+      out.write("            <table id=\"login\">\n");
+      out.write("                <tr>\n");
+      out.write("                    <td> Usuario:</td>\n");
+      out.write("                    <td><input id=\"il\" type=\"text\" name=\"txtUsuario\"></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td> Contraseña: </td>\n");
+      out.write("                    <td><input id=\"il\" type=\"password\" name=\"txtContra\"></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td align=\"center\" colspan=\"2\"><button id=\"anadir\" type=\"submit\" name=\"btnIngresar\" value=\"Ingresar\">Ingresar</button></td>\n");
+      out.write("                </tr>\n");
+      out.write("            </table>\n");
       out.write("\n");
       out.write("        </form>\n");
       out.write("\n");
@@ -83,15 +94,15 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
                         sesion.setAttribute("nivel", "1");
                         response.sendRedirect("indexUser.jsp");
                         break;
-                        
+
                     default:
                         out.write("Usuario no existe, o contraseña inválida");
                         break;
 
                 }
             }
-            
-            if(request.getParameter("cerrar") != null){
+
+            if (request.getParameter("cerrar") != null) {
                 session.invalidate();
             }
         

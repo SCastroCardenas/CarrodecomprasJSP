@@ -17,6 +17,7 @@ DELETE FROM producto WHERE nombre = 'Huawei Mate 20 Lite 4G';
 
 
 INSERT INTO producto VALUES (1, 'Huawei Mate 20 Lite 4G', 700000, 'huaweimate20l.jpg');
+INSERT INTO producto VALUES (1, 'Avvio 2018 Colombia Plus 4G', 432000, 'avvio.jpg');
 INSERT INTO producto VALUES (2, 'Huawei P Smart', 640000, 'huaweips.jpg');
 
 
