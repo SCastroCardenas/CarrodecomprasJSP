@@ -13,6 +13,9 @@ imagen varchar(20) NOT NULL,
 PRIMARY KEY (codigoProducto)
 );
 
+DELETE FROM producto WHERE nombre = 'Huawei Mate 20 Lite 4G';
+
+
 INSERT INTO producto VALUES (1, 'Huawei Mate 20 Lite 4G', 700000, 'huaweimate20l.jpg');
 INSERT INTO producto VALUES (2, 'Huawei P Smart', 640000, 'huaweips.jpg');
 

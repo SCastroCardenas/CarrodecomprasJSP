@@ -12,7 +12,8 @@
         <title>Mensaje</title>
     </head>
     <body>
-        <h1 align="center">
+        <img src="imagenes/banner2.PNG" width="100%">
+        <h1 id="menh1" align="center">
             <%
                 if (request.getParameter("men") != null) {
                     out.println(request.getParameter("men"));
@@ -20,7 +21,7 @@
             %>
         </h1><br>
         <h2 align="center">
-            <a href="index.jsp">Volver a principal</a>
+            <a id="menh1" href="index.jsp">Volver a principal</a>
         </h2>
     </body>
 </html>

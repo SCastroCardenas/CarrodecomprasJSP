@@ -21,7 +21,7 @@
             %>
         </h1><br>
         <h2 align="center">
-            <a id="menh1" href="index.jsp">Volver a principal</a>
+            <a id="menh1" href="indexUser.jsp">Volver a principal</a>
         </h2>
     </body>
 </html>

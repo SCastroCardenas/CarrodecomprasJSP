@@ -7,7 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Catalogo</title>
-    </head>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
     <body>
         <%
             HttpSession sesion = request.getSession();
@@ -21,12 +21,13 @@
                 out.print("<script>location.replace('login.jsp');</script>");
             }
             %>
+            <img src="imagenes/banner2.PNG" width="100%">
         <h3>
-            <table border="1" width="1000" align="center">
-                <tr bgcolor="skyblue">
+            <table id="menu" border="1"  align="center">
+
+                <tr>
                     <th><a href="index.jsp">Catálogo</a></th>
                     <th><a href="registrarProducto.jsp">Registrar Productos</a></th>
-                    <th><a href="">Ventas realizadas</a></th>
                     <th><a href="login.jsp?cerrar=true">Cerrar Sesión</a></th>
                     <th width="200"><%= sesion.getAttribute("user").toString()%></th>
                 </tr>
@@ -35,7 +36,7 @@
 
         <h1 align="center">Catalogo de Productos</h1>
 
-        <table border="0" width="700" align="center">
+        <table id="productos" border="0" align="center">
 
             <%--Metodo que permite traer los productos, los trae en un Array y los guarda en un Array--%>
 
@@ -45,16 +46,16 @@
                 for (int i = 0; i < lista.size(); i++) {
                     Productos p = lista.get(i);
             %>
-            <th><img src="imagenes/<%=p.getImagen()%>" width="150px"><br>
+            <th><img  id="img" src="imagenes/<%=p.getImagen()%>" width="200px"><br>
                 <%=p.getNombre()%><br>
-                <%=p.getPrecio()%><br>
-                <a href="modificarProducto.jsp?id=<%= p.getCodigoProducto()%>">Modificar</a>
+                $<%=p.getPrecio()%><br>
+                <button id="modi" onclick="window.location='modificarProducto.jsp?id=<%= p.getCodigoProducto()%>'" value="Modificar">Modificar</button>
             </th>
             <%--Con esta variable llamada salto hacemos que cada 3 productos salte de linea--%>
 
             <%
                 salto++;
-                if (salto == 3) {
+                if (salto == 4) {
             %>
             <tr>
                 <%

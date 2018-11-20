@@ -12,14 +12,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
-    <body>
-        <h1>Iniciar Sesión</h1>
+    <body id="bobo">
+        <h2 id="h1iniciar">Iniciar Sesión</h2>
 
         <form action="login.jsp" method="post">
-            Usuario: <input type="text" name="txtUsuario">
-            Contraseña: <input type="text" name="txtContra">
-            <input type="submit" name="btnIngresar" value="Ingresar">
+            <table id="login">
+                <tr>
+                    <td> Usuario:</td>
+                    <td><input id="il" type="text" name="txtUsuario"></td>
+                </tr>
+                <tr>
+                    <td> Contraseña: </td>
+                    <td><input id="il" type="password" name="txtContra"></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2"><button id="anadir" type="submit" name="btnIngresar" value="Ingresar">Ingresar</button></td>
+                </tr>
+            </table>
 
         </form>
 
@@ -42,15 +53,15 @@
                         sesion.setAttribute("nivel", "1");
                         response.sendRedirect("indexUser.jsp");
                         break;
-                        
+
                     default:
                         out.write("Usuario no existe, o contraseña inválida");
                         break;
 
                 }
             }
-            
-            if(request.getParameter("cerrar") != null){
+
+            if (request.getParameter("cerrar") != null) {
                 session.invalidate();
             }
         %>

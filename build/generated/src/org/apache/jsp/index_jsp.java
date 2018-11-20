@@ -46,7 +46,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("\n");
@@ -55,15 +54,30 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Catalogo</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("        ");
+
+            HttpSession sesion = request.getSession();
+            String usuario;
+            String nivel;
+            
+            if(sesion.getAttribute("user")!= null && sesion.getAttribute("nivel")!= null){
+                usuario = sesion.getAttribute("user").toString();
+                nivel = sesion.getAttribute("nivel").toString();
+            }else{
+                out.print("<script>location.replace('login.jsp');</script>");
+            }
+            
+      out.write("\n");
       out.write("        <h3>\n");
       out.write("            <table border=\"1\" width=\"1000\" align=\"center\">\n");
       out.write("                <tr bgcolor=\"skyblue\">\n");
       out.write("                    <th><a href=\"index.jsp\">Catálogo</a></th>\n");
       out.write("                    <th><a href=\"registrarProducto.jsp\">Registrar Productos</a></th>\n");
-      out.write("                    <th><a href=\"registrarVenta.jsp\">Registrar Ventas</a></th>\n");
-      out.write("                    <th><a href=\"consultarVenta.jsp\">Consultar Ventas</a></th>\n");
-      out.write("                    <th><a href=\"ServletLogueo?accion=cerrar\">Cerrar Sesión</a></th>\n");
-      out.write("                    <th width=\"200\"></th>\n");
+      out.write("                    <th><a href=\"\">Ventas realizadas</a></th>\n");
+      out.write("                    <th><a href=\"login.jsp?cerrar=true\">Cerrar Sesión</a></th>\n");
+      out.write("                    <th width=\"200\">");
+      out.print( sesion.getAttribute("user").toString());
+      out.write("</th>\n");
       out.write("                </tr>\n");
       out.write("            </table>\n");
       out.write("        </h3>\n");
@@ -92,10 +106,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                ");
       out.print(p.getPrecio());
       out.write("<br>\n");
-      out.write("                <a href=\"\">Modificar</a> || \n");
-      out.write("                <a href=\"anadirCarrito.jsp?id=");
-      out.print( p.getCodigoProducto() );
-      out.write("\">Añadir</a>\n");
+      out.write("                <a href=\"modificarProducto.jsp?id=");
+      out.print( p.getCodigoProducto());
+      out.write("\">Modificar</a>\n");
       out.write("            </th>\n");
       out.write("            ");
       out.write("\n");
@@ -116,11 +129,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        </table>\n");
       out.write("    </body>\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

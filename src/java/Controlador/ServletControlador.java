@@ -31,6 +31,8 @@ public class ServletControlador extends HttpServlet {
         String accion = request.getParameter("accion");
         if(accion.equals("insertar")){
             this.RegistrarProducto(request, response);
+        }else if(accion.equals("insertar2")){
+            this.ComprarProducto(request, response);
         }
     }
     
@@ -44,10 +46,18 @@ public class ServletControlador extends HttpServlet {
         
         boolean rpta = ProductoDB.insertarProducto(p);
         if(rpta == true){
-            response.sendRedirect("mensaje.jsp?men=Se registro con Exito");
+            response.sendRedirect("mensaje.jsp?men=Se registro con exito");
         }else{
             response.sendRedirect("mensaje.jsp?men=Error al Registrar");
         }
+
+    }
+    
+    private void ComprarProducto(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException{
+        
+            response.sendRedirect("mensaje2.jsp?men=La compra se realizo con exito");
+        
 
     }
 
