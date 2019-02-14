@@ -14,7 +14,7 @@ public class ConexionDB {
             //Cargamos el driver MYSQL
             //El Driver se encuentra en la carpeta de "Programación" de U Sexto semestre, archivo tipo JAR
             Class.forName("com.mysql.jdbc.Driver");
-            cn = DriverManager.getConnection("jdbc:mysql://localhost/carritocomprasjsp", "root", "#JCV!systemAS@");
+            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/carritocomprasjsp", "root", "");
             System.out.println("Conexion Satisfactoria :)");
                     
         }catch(Exception e){

@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/scast/Documents/NetBeansProjects/CarritoJSP/web/login.jsp</file>
-            <file>file:/C:/Users/scast/Documents/NetBeansProjects/CarritoJSP/web/indexUser.jsp</file>
-            <file>file:/C:/Users/scast/Documents/NetBeansProjects/CarritoJSP/web/css/index.css</file>
-            <file>file:/C:/Users/scast/Documents/NetBeansProjects/CarritoJSP/src/java/Controlador/ServletAgregarCarrito.java</file>
+            <file>file:/D:/CarrodeCompras%20JSP/CarrodecomprasJSP/src/java/Modelo/UsuarioDB.java</file>
+            <file>file:/D:/CarrodeCompras%20JSP/CarrodecomprasJSP/web/login.jsp</file>
+            <file>file:/D:/CarrodeCompras%20JSP/CarrodecomprasJSP/src/java/Conexion/ConexionDB.java</file>
+            <file>file:/D:/CarrodeCompras%20JSP/CarrodecomprasJSP/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

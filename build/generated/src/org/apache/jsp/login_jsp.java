@@ -42,38 +42,38 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
-      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/index.css\">\n");
-      out.write("    </head>\n");
-      out.write("    <body id=\"bobo\">\n");
-      out.write("        <h2 id=\"h1iniciar\">Iniciar Sesión</h2>\n");
-      out.write("\n");
-      out.write("        <form action=\"login.jsp\" method=\"post\">\n");
-      out.write("            <table id=\"login\">\n");
-      out.write("                <tr>\n");
-      out.write("                    <td> Usuario:</td>\n");
-      out.write("                    <td><input id=\"il\" type=\"text\" name=\"txtUsuario\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                <tr>\n");
-      out.write("                    <td> Contraseña: </td>\n");
-      out.write("                    <td><input id=\"il\" type=\"password\" name=\"txtContra\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                <tr>\n");
-      out.write("                    <td align=\"center\" colspan=\"2\"><button id=\"anadir\" type=\"submit\" name=\"btnIngresar\" value=\"Ingresar\">Ingresar</button></td>\n");
-      out.write("                </tr>\n");
-      out.write("            </table>\n");
-      out.write("\n");
-      out.write("        </form>\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <title>JSP Page</title>\r\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/index.css\">\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body id=\"bobo\">\r\n");
+      out.write("        <h2 id=\"h1iniciar\">Iniciar Sesión</h2>\r\n");
+      out.write("\r\n");
+      out.write("        <form action=\"login.jsp\" method=\"post\">\r\n");
+      out.write("            <table id=\"login\">\r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <td> Usuario:</td>\r\n");
+      out.write("                    <td><input id=\"il\" type=\"text\" name=\"txtUsuario\"></td>\r\n");
+      out.write("                </tr>\r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <td> Contraseña: </td>\r\n");
+      out.write("                    <td><input id=\"il\" type=\"password\" name=\"txtContra\"></td>\r\n");
+      out.write("                </tr>\r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <td align=\"center\" colspan=\"2\"><button id=\"anadir\" type=\"submit\" name=\"btnIngresar\" value=\"Ingresar\">Ingresar</button></td>\r\n");
+      out.write("                </tr>\r\n");
+      out.write("            </table>\r\n");
+      out.write("\r\n");
+      out.write("        </form>\r\n");
+      out.write("\r\n");
       out.write("        ");
 
             UsuarioDB udb = new UsuarioDB();
@@ -106,9 +106,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
                 session.invalidate();
             }
         
-      out.write("\n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
